@@ -1,5 +1,16 @@
 # Domain Specific Language for the Abstraction and Reasoning Corpus (ARC-DSL)
 
+Fork/update by Roger Campbell. I much appreciate all of the work that went into creating this project and then sharing it with the rest of us. Thanks to Michael for that!
+
+The DSL looks like a great start to building a generic solver, but I realized that before I could do that I needed to resolve some issues since I could not get all of the solvers and tests to work. I am hopeful that others (with perhaps more Python experience) might be able to help me fix these issues. It appears that there are some differences in the runtime of python v 3.9 that Michael was using and the more current versions ... I am currently on 3.12.4. So, my immediate goal is to get the code updated to run most of the tests without problems. Most files are the same as in Michael's original project and the tests I have expanded upon.
+
+- arc-agi_training_challenges.json (from ARC Prize 2024)
+- - details at [https://www.kaggle.com/competitions/arc-prize-2024/data]
+- dsl.py (now includes arc_types and constants for simplicity)
+- dsl_tests.py (new tests added, one for each training challenge task)
+- solvers.py (same as original)
+- solver_tests.py
+
 The DSL was created with the aim of being expressive enough to allow programs solving arbitrary ARC tasks, and generic, i.e. consisting of only few primitives, each useful for many tasks (see [`dsl.py`](dsl.py)). As a proof of concept, solver programs for the training tasks were written (see [`solvers.py`](solvers.py)). See [`arc_dsl_writeup.pdf`](arc_dsl_writeup.pdf) for a more detailed description of the work.
 
 
