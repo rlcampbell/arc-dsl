@@ -1,41 +1,60 @@
+import json
+
+from solvers import *
+
+
+with open("arc-agi_training_challenges.json") as fp:
+    train_challenges = json.load(fp)
+
+
+def runSolver(key):
+    task = train_challenges[key]
+    train_inputs = [example["input"] for example in task["train"]]
+    train_outputs = [example["output"] for example in task["train"]]
+    solverFunction = globals()["solve_" + key]
+    for i in range(len(train_inputs)):
+        trainOut = tuple(tuple(inner_list) for inner_list in train_outputs[i])
+        assert solverFunction(train_inputs[i]) == trainOut
+
+
 def test_007bbfb7():
-    runSolver("xxxxx")
+    runSolver("007bbfb7")
 
 
 def test_00d62c1b():
-    runSolver("xxxxx")
+    runSolver("00d62c1b")
 
 
 def test_017c7c7b():
-    runSolver("xxxxx")
+    runSolver("017c7c7b")
 
 
 def test_025d127b():
-    runSolver("xxxxx")
+    runSolver("025d127b")
 
 
 def test_045e512c():
-    runSolver("xxxxx")
+    runSolver("045e512c")
 
 
 def test_0520fde7():
-    runSolver("xxxxx")
+    runSolver("0520fde7")
 
 
 def test_05269061():
-    runSolver("xxxxx")
+    runSolver("05269061")
 
 
 def test_05f2a901():
-    runSolver("xxxxx")
+    runSolver("05f2a901")
 
 
 def test_06df4c85():
-    runSolver("xxxxx")
+    runSolver("06df4c85")
 
 
 def test_08ed6ac7():
-    runSolver("xxxxx")
+    runSolver("08ed6ac7")
 
 
 def test_09629e4f():
