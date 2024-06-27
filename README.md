@@ -7,9 +7,22 @@ The DSL looks like a great start to building a generic solver, but I realized th
 - arc-agi_training_challenges.json (from ARC Prize 2024)
 - - details at [https://www.kaggle.com/competitions/arc-prize-2024/data]
 - dsl.py (now includes arc_types and constants for simplicity)
-- dsl_tests.py (new tests added, one for each training challenge task)
 - solvers.py (same as original)
-- solver_tests.py
+- test_dsl.py (160 tests, one for each DSL function, from Michael's code)
+- test_solvers.py (400 tests to run each solver, one for each training challenge task, all of the examples)
+
+Here are the initial results from running pytest on these 560 tests. 
+- DSL tests work except for one, the test_mpapply that fails assertion
+- solver tests fail 305 out of 400
+- - 288 with ValueError: too many values to unpack (expected 2)
+- - 3 with TypeError: can only concatenate list (not "tuple")
+- - 12 others that failed asserts
+- see test_output.txt for more info
+
+Nearly all of these are type/value errors. Michael was making good use of unions of different types for inputs/outputs of the DSL. So, my suspicion is that the change from Python 3.9 (that Michael used) to more current versions has some underlying changes in how these types work.
+
+
+
 
 The DSL was created with the aim of being expressive enough to allow programs solving arbitrary ARC tasks, and generic, i.e. consisting of only few primitives, each useful for many tasks (see [`dsl.py`](dsl.py)). As a proof of concept, solver programs for the training tasks were written (see [`solvers.py`](solvers.py)). See [`arc_dsl_writeup.pdf`](arc_dsl_writeup.pdf) for a more detailed description of the work.
 
