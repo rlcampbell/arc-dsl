@@ -678,7 +678,7 @@ def fgpartition(grid: Grid) -> Objects:
 
 def uppermost(patch: Patch) -> Integer:
     """row index of uppermost occupied cell"""
-    if isinstance(patch, List):
+    if isinstance(patch, list):
         for i in range(len(patch)):
             # Check if there is any non-zero element in the row
             if any(element != 0 for element in patch[i]):
@@ -688,7 +688,7 @@ def uppermost(patch: Patch) -> Integer:
 
 def lowermost(patch: Patch) -> Integer:
     """row index of lowermost occupied cell"""
-    if isinstance(patch, List):
+    if isinstance(patch, list):
         for i in range(len(patch) - 1, -1, -1):
             # Check if there is any non-zero element in the row
             if any(element != 0 for element in patch[i]):
@@ -698,7 +698,7 @@ def lowermost(patch: Patch) -> Integer:
 
 def leftmost(patch: Patch) -> Integer:
     """column index of leftmost occupied cell"""
-    if isinstance(patch, List):
+    if isinstance(patch, list):
         left = None
         for row in patch:
             for j in range(len(row)):
@@ -711,7 +711,7 @@ def leftmost(patch: Patch) -> Integer:
 
 def rightmost(patch: Patch) -> Integer:
     """column index of rightmost occupied cell"""
-    if isinstance(patch, List):
+    if isinstance(patch, list):
         right = None
         for row in patch:
             for j in range(len(row) - 1, -1, -1):
