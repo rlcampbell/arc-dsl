@@ -678,21 +678,48 @@ def fgpartition(grid: Grid) -> Objects:
 
 def uppermost(patch: Patch) -> Integer:
     """row index of uppermost occupied cell"""
+    if isinstance(patch, List):
+        for i in range(len(patch)):
+            # Check if there is any non-zero element in the row
+            if any(element != 0 for element in patch[i]):
+                return i
     return min(i for i, j in toindices(patch))
 
 
 def lowermost(patch: Patch) -> Integer:
     """row index of lowermost occupied cell"""
+    if isinstance(patch, List):
+        for i in range(len(patch) - 1, -1, -1):
+            # Check if there is any non-zero element in the row
+            if any(element != 0 for element in patch[i]):
+                return i
     return max(i for i, j in toindices(patch))
 
 
 def leftmost(patch: Patch) -> Integer:
     """column index of leftmost occupied cell"""
+    if isinstance(patch, List):
+        left = None
+        for row in patch:
+            for j in range(len(row)):
+                if row[j] != 0:
+                    left = j if left is None else max(left, j)
+                    break
+        return left
     return min(j for i, j in toindices(patch))
 
 
 def rightmost(patch: Patch) -> Integer:
     """column index of rightmost occupied cell"""
+    if isinstance(patch, List):
+        right = None
+        for row in patch:
+            for j in range(len(row) - 1, -1, -1):
+                if row[j] != 0:
+                    right = j if right is None else max(right, j)
+                    break
+        return right
+
     return max(j for i, j in toindices(patch))
 
 
@@ -757,6 +784,8 @@ def centerofmass(patch: Patch) -> IntegerTuple:
 
 def palette(element: Element) -> IntegerSet:
     """colors occurring in object or grid"""
+    if isinstance(element, list):
+        return frozenset(item for row in element for item in row)
     if isinstance(element, tuple):
         return frozenset({v for r in element for v in r})
     return frozenset({v for v, _ in element})
