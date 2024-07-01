@@ -441,6 +441,9 @@ def prapply(function: Callable, a: Container, b: Container) -> FrozenSet:
 
 def mostcolor(element: Element) -> Integer:
     """most common color"""
+    if isinstance(element, list):
+        colors = [item for sublist in element for item in sublist]
+        return max(set(colors), key=colors.count)
     values = (
         [v for r in element for v in r]
         if isinstance(element, tuple)
@@ -451,6 +454,9 @@ def mostcolor(element: Element) -> Integer:
 
 def leastcolor(element: Element) -> Integer:
     """least common color"""
+    if isinstance(element, list):
+        colors = [item for sublist in element for item in sublist]
+        return min(set(colors), key=colors.count)
     values = (
         [v for r in element for v in r]
         if isinstance(element, tuple)
@@ -943,6 +949,14 @@ def hconcat(a: Grid, b: Grid) -> Grid:
 
 def vconcat(a: Grid, b: Grid) -> Grid:
     """concatenate two grids vertically"""
+    # TODO - only fixes one test
+    # if isinstance(b, tuple):
+    #     result = tuple()
+    #     for item in a:
+    #         result = result + (item,)
+    #     for item in b:
+    #         result = result + (item,)
+    #     return result
     return a + b
 
 

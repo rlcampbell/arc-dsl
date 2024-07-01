@@ -8,10 +8,7 @@ with open("arc-agi_training_challenges.json") as fp:
 
 
 def runSolver(key):
-    try:
-        task = train_challenges[key]
-    except:
-        return
+    task = train_challenges[key]
     train_inputs = [example["input"] for example in task["train"]]
     train_outputs = [example["output"] for example in task["train"]]
     solverFunction = globals()["solve_" + key]
