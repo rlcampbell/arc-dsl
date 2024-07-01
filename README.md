@@ -13,11 +13,11 @@ The DSL looks like a great start to building a generic solver, but I realized th
 
 Here are the initial results from running pytest on these 560 tests. 
 - DSL tests work except for one, the test_mpapply that fails assertion
-- solver tests fail 107 out of 400
+- solver tests fail 82 out of 400
 - - 45 with ValueError: too many values to unpack (expected 2)
 - - 9 with TypeError(s)
 - - 3 with RuntimeError: generator raised StopIteration
-- - 50 others that failed asserts 
+- - 25 others that failed asserts 
 - see test_output.txt for more info
 
 Nearly all of these are type/value errors. Michael was making good use of unions of different types for inputs/outputs of the DSL. So, my suspicion is that the change from Python 3.9 (that Michael used) to more current versions has some underlying changes in how these types work.

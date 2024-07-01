@@ -3,108 +3,83 @@ FAILED test_dsl.py::test_mpapply - assert ((3, (0, 1)),..., (4, (0, 0))) == ((3,
 FAILED test_solvers.py::test_017c7c7b - TypeError: can only concatenate list (not "tuple") to list
 FAILED test_solvers.py::test_0520fde7 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_0a938d79 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_0b148d64 - assert ([0, 2, 2, 2,... 0, ...], ...) == ((0, 2, 2, 2,... 0, ...), ...)
 FAILED test_solvers.py::test_0e206a2e - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_1190e5a7 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_1b60fb0c - assert ((0, 0, 0, 0,... 1, ...), ...) == ((0, 0, 0, 0,... 1, ...), ...)
-FAILED test_solvers.py::test_1c786137 - assert ([0, 0, 8, 0,...0, 3, 0, ...]) == ((0, 0, 8, 0,...0, 3, 0, ...))
-FAILED test_solvers.py::test_1cf80156 - assert ([0, 2, 2, 2]... [2, 0, 2, 0]) == ((0, 2, 2, 2)... (2, 0, 2, 0))
-FAILED test_solvers.py::test_1f85a75f - assert ([3, 3, 0], [...3], [0, 3, 3]) == ((3, 3, 0), (...3), (0, 3, 3))
-FAILED test_solvers.py::test_2204b7a8 - assert ((4, 4, 4, 4,... 0, ...), ...) == ((4, 4, 4, 4,... 0, ...), ...)
-FAILED test_solvers.py::test_23b5c85d - assert ([8, 8, 8], [...8], [8, 8, 8]) == ((8, 8, 8), (...8), (8, 8, 8))
-FAILED test_solvers.py::test_28bf18c6 - assert ([8, 8, 0, 8,..., 8, 8, 8, 8]) == ((8, 8, 0, 8,..., 8, 8, 8, 8))
+FAILED test_solvers.py::test_1b60fb0c - assert [[0, 0, 0, 0,... 1, ...], ...] == [[0, 0, 0, 0,... 1, ...], ...]
+FAILED test_solvers.py::test_2204b7a8 - assert [[4, 4, 4, 4,... 0, ...], ...] == [[4, 4, 4, 4,... 0, ...], ...]
 FAILED test_solvers.py::test_28e73c20 - TypeError: unsupported operand type(s) for -: 'NoneType' and 'NoneType'
-FAILED test_solvers.py::test_2dc579da - assert ([8, 8], [4, 8]) == ((8, 8), (4, 8))
-FAILED test_solvers.py::test_2dee498d - assert ([4, 5, 1], [...5], [1, 5, 4]) == ((4, 5, 1), (...5), (1, 5, 4))
-FAILED test_solvers.py::test_3631a71a - assert ((0, 0, 0, 0,... 0, ...), ...) == ((0, 0, 0, 0,... 0, ...), ...)
+FAILED test_solvers.py::test_3631a71a - assert [[0, 0, 0, 0,... 0, ...], ...] == [[0, 0, 0, 0,... 0, ...], ...]
 FAILED test_solvers.py::test_36fdfd69 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_39a8645d - assert ([8, 0, 8], [...0], [8, 0, 8]) == ((8, 0, 8), (...0), (8, 0, 8))
-FAILED test_solvers.py::test_39e1d7f9 - assert ((0, 0, 0, 8,... 2, ...), ...) == ((4, 4, 4, 8,... 2, ...), ...)
+FAILED test_solvers.py::test_39e1d7f9 - assert [[0, 0, 0, 8,... 2, ...], ...] == [[4, 4, 4, 8,... 2, ...], ...]
 FAILED test_solvers.py::test_3af2c5a8 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_3f7978a0 - assert ([8, 0, 0, 0,..., 0, 0, 0, 8]) == ((8, 0, 0, 0,..., 0, 0, 0, 8))
 FAILED test_solvers.py::test_44f52bb0 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_46442a0e - TypeError: can only concatenate list (not "tuple") to list
 FAILED test_solvers.py::test_469497ad - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_47c1f68c - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_484b58aa - assert ((2, 2, 2, 1,... 1, ...), ...) == ((5, 4, 2, 1,... 1, ...), ...)
-FAILED test_solvers.py::test_48d8fb45 - assert ([0, 1, 0], [...1], [0, 1, 1]) == ((0, 1, 0), (...1), (0, 1, 1))
-FAILED test_solvers.py::test_4938f0c2 - assert [[0, 0, 0, 0,... 3, ...], ...] == ((0, 0, 0, 0,... 3, ...), ...)
-FAILED test_solvers.py::test_496994bd - assert ([2, 2, 2], [2, 2, 2]) == ((2, 2, 2), (...0, 0, 0), ...)
+FAILED test_solvers.py::test_484b58aa - assert [[2, 2, 2, 1,... 1, ...], ...] == [[5, 4, 2, 1,... 1, ...], ...]
+FAILED test_solvers.py::test_496994bd - assert [[2, 2, 2], [2, 2, 2]] == [[2, 2, 2], [...0, 0, 0], ...]
 FAILED test_solvers.py::test_4be741c5 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_4c4377d9 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_4c5c2cf0 - RuntimeError: generator raised StopIteration
 FAILED test_solvers.py::test_508bd3b6 - RuntimeError: generator raised StopIteration
 FAILED test_solvers.py::test_539a4f51 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_53b68214 - assert ((1,),) == ((1, 1, 1, 0,... 0, ...), ...)
-FAILED test_solvers.py::test_54d82841 - assert ((0, 6, 6, 6,... 0, ...), ...) == ((0, 6, 6, 6,... 0, ...), ...)
-FAILED test_solvers.py::test_5bd6f4ac - assert ([9, 7, 0], [...4], [4, 0, 0]) == ((9, 7, 0), (...4), (4, 0, 0))
+FAILED test_solvers.py::test_53b68214 - assert [[1]] == [[1, 1, 1, 0,... 0, ...], ...]
+FAILED test_solvers.py::test_54d82841 - assert [[0, 6, 6, 6,... 0, ...], ...] == [[0, 6, 6, 6,... 0, ...], ...]
 FAILED test_solvers.py::test_62c24649 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_662c240a - assert ([8, 9, 8], [...8], [8, 8, 8]) == ((4, 4, 4), (...3), (3, 3, 3))
+FAILED test_solvers.py::test_662c240a - assert [[8, 9, 8], [...8], [8, 8, 8]] == [[4, 4, 4], [...3], [3, 3, 3]]
 FAILED test_solvers.py::test_6773b310 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_67a3c6ac - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_67e8384a - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_68b16354 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_6a1e5592 - assert ((2, 2, 2, 2,... 0, ...), ...) == ((2, 2, 2, 2,... 0, ...), ...)
+FAILED test_solvers.py::test_6a1e5592 - assert [[2, 2, 2, 2,... 0, ...], ...] == [[2, 2, 2, 2,... 0, ...], ...]
 FAILED test_solvers.py::test_6d0aefbc - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_6fa7a44f - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_72ca375d - assert ([6, 6, 6, 6], [0, 6, 6, 0]) == ((6, 6, 6, 6), (0, 6, 6, 0))
 FAILED test_solvers.py::test_73251a56 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_7468f01a - assert ([8, 2, 8, 8,...8, 8, 8, ...]) == ((8, 2, 8, 8,...8, 8, 8, ...))
 FAILED test_solvers.py::test_746b3537 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_74dd1130 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_7837ac64 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_7b7f7511 - assert [[2, 3], [3, 2], [4, 4]] == ((2, 3), (3, 2), (4, 4))
-FAILED test_solvers.py::test_7df24a62 - assert ((0, 0, 0, 0,... 1, ...), ...) == ((0, 0, 0, 0,... 1, ...), ...)
+FAILED test_solvers.py::test_7df24a62 - assert [[0, 0, 0, 0,... 1, ...], ...] == [[0, 0, 0, 0,... 1, ...], ...]
 FAILED test_solvers.py::test_7fe24cdd - TypeError: can only concatenate list (not "tuple") to list
 FAILED test_solvers.py::test_855e0971 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_8be77c9e - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_8d5021e8 - TypeError: can only concatenate tuple (not "list") to tuple
-FAILED test_solvers.py::test_8efcae92 - assert ([1, 1, 1, 1,..., 1, 2, 1, 1]) == ((1, 1, 1, 1,..., 1, 2, 1, 1))
 FAILED test_solvers.py::test_91413438 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_91714a58 - assert ((0, 0, 0, 0,... 2, ...), ...) == ((0, 0, 0, 0,... 2, ...), ...)
+FAILED test_solvers.py::test_91714a58 - assert [[0, 0, 0, 0,... 2, ...], ...] == [[0, 0, 0, 0,... 2, ...], ...]
 FAILED test_solvers.py::test_9172f3a0 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_941d9a10 - RuntimeError: generator raised StopIteration
-FAILED test_solvers.py::test_99b1bc43 - assert ((0,), (0,), (0,), (3,)) == ((0, 0, 0, 0)... (3, 3, 3, 3))
-FAILED test_solvers.py::test_99fa7670 - assert ((0, 0, 0, 0,..., 0, 0, 0, 0)) == ((0, 0, 0, 0,..., 0, 0, 0, 3))
+FAILED test_solvers.py::test_99b1bc43 - assert [[0], [0], [0], [3]] == [[0, 0, 0, 0]... [3, 3, 3, 3]]
+FAILED test_solvers.py::test_99fa7670 - assert [[0, 0, 0, 0,..., 0, 0, 0, 0]] == [[0, 0, 0, 0,..., 0, 0, 0, 3]]
 FAILED test_solvers.py::test_9d9215db - TypeError: unhashable type: 'list'
 FAILED test_solvers.py::test_9dfd6313 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_9ecd008a - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_9f236235 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_a3df8b1e - assert ((1,),) == ((0, 1), (1, ..., (1, 0), ...)
-FAILED test_solvers.py::test_a416b8f3 - assert ([0, 5, 0, 0,..., 0, 0, 0, 0]) == ((0, 5, 0, 0,..., 0, 0, 0, 0))
-FAILED test_solvers.py::test_a61ba2ce - assert ([8, 8, 2, 2]... [3, 3, 1, 1]) == ((8, 8, 2, 2)... (3, 3, 1, 1))
+FAILED test_solvers.py::test_a3df8b1e - assert [[1]] == [[0, 1], [1, ..., [1, 0], ...]
 FAILED test_solvers.py::test_a87f7484 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_ac0a08a4 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_ae4f1146 - assert ([8, 1, 8], [...1], [1, 8, 1]) == ((8, 1, 8), (...1), (1, 8, 1))
-FAILED test_solvers.py::test_b190f7f5 - assert ((0, 0, 0, 0,...0, 2, 0, ...)) == ((0, 2, 0, 0,... 0, ...), ...)
+FAILED test_solvers.py::test_b190f7f5 - assert [[0, 0, 0, 0,...0, 2, 0, ...]] == [[0, 2, 0, 0,... 0, ...], ...]
 FAILED test_solvers.py::test_b7249182 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_b91ae062 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_bbc9ae5d - assert ((1, 1, 0, 0, 0, 0),) == ((1, 1, 0, 0,..., 1, 1, 0, 0))
-FAILED test_solvers.py::test_bd4472b8 - assert ([2, 1, 4], [...2, 2, 2), ...) == ((2, 1, 4), (...2, 2, 2), ...)
-FAILED test_solvers.py::test_be94b721 - assert ([2, 2, 0], [...2], [2, 2, 2]) == ((2, 2, 0), (...2), (2, 2, 2))
-FAILED test_solvers.py::test_beb8660c - assert ((0, 0, 0), (...1, 1, 1), ...) == ((0, 0, 0, 0,... 1, ...), ...)
+FAILED test_solvers.py::test_bbc9ae5d - assert [[1, 1, 0, 0, 0, 0]] == [[1, 1, 0, 0,..., 1, 1, 0, 0]]
+FAILED test_solvers.py::test_beb8660c - assert [[0, 0, 0], [...1, 1, 1], ...] == [[0, 0, 0, 0,... 1, ...], ...]
 FAILED test_solvers.py::test_c1d99e64 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_c3e719e8 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_c3f564a4 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_c59eb873 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_c909285e - assert ([3, 3, 3, 3,... 0, ...], ...) == ((3, 3, 3, 3,... 0, ...), ...)
 FAILED test_solvers.py::test_c9e6f938 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_c9f8e694 - assert ((0, 0, 0, 0,... 0, ...), ...) == ((0, 0, 0, 0,... 0, ...), ...)
+FAILED test_solvers.py::test_c9f8e694 - assert [[0, 0, 0, 0,... 0, ...], ...] == [[0, 0, 0, 0,... 0, ...], ...]
 FAILED test_solvers.py::test_cce03e0d - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_ce602527 - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_d10ecb37 - assert ([4, 3], [6, 0]) == ((4, 3), (6, 0))
-FAILED test_solvers.py::test_d23f8c26 - assert ((0, 0, 0, 0,..., 0, 0, 0, 0)) == ((0, 0, 3, 0,..., 0, 9, 0, 0))
+FAILED test_solvers.py::test_d23f8c26 - assert [[0, 0, 0, 0,..., 0, 0, 0, 0]] == [[0, 0, 3, 0,..., 0, 9, 0, 0]]
 FAILED test_solvers.py::test_d406998b - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_de1cd16c - TypeError: unhashable type: 'list'
-FAILED test_solvers.py::test_e179c5f4 - assert ((1, 8),) == ((8, 1), (1, ..., (1, 8), ...)
-FAILED test_solvers.py::test_e40b9e2f - assert ((0, 0, 0, 0,... 7, ...), ...) == ((0, 0, 0, 0,... 7, ...), ...)
-FAILED test_solvers.py::test_e48d4e1a - assert ((0, 2, 0, 0,... 0, ...), ...) == ((0, 2, 0, 0,... 0, ...), ...)
+FAILED test_solvers.py::test_e179c5f4 - assert [[1, 8]] == [[8, 1], [1, ..., [1, 8], ...]
+FAILED test_solvers.py::test_e40b9e2f - assert [[0, 0, 0, 0,... 7, ...], ...] == [[0, 0, 0, 0,... 7, ...], ...]
+FAILED test_solvers.py::test_e48d4e1a - assert [[0, 2, 0, 0,... 0, ...], ...] == [[0, 2, 0, 0,... 0, ...], ...]
 FAILED test_solvers.py::test_e50d258f - TypeError: can only concatenate list (not "tuple") to list
-FAILED test_solvers.py::test_e9afcf9a - assert ([3, 9, 3, 9,..., 9, 3, 9, 3]) == ((3, 9, 3, 9,..., 9, 3, 9, 3))
 FAILED test_solvers.py::test_eb281b96 - TypeError: can only concatenate list (not "tuple") to list
-FAILED test_solvers.py::test_f15e1fac - assert ((0, 8, 0, 0,... 0, ...), ...) == ((0, 8, 0, 0,... 0, ...), ...)
+FAILED test_solvers.py::test_f15e1fac - assert [[0, 8, 0, 0,... 0, ...], ...] == [[0, 8, 0, 0,... 0, ...], ...]
 FAILED test_solvers.py::test_f25ffba3 - ValueError: too many values to unpack (expected 2)
 FAILED test_solvers.py::test_f8b3ba0a - ValueError: too many values to unpack (expected 2)
-FAILED test_solvers.py::test_fafffa47 - assert ((2,), (2,), (0,)) == ((2, 0, 0), (...0), (0, 0, 0))
+FAILED test_solvers.py::test_fafffa47 - assert [[2], [2], [0]] == [[2, 0, 0], [...0], [0, 0, 0]]
 FAILED test_solvers.py::test_ff805c23 - ValueError: too many values to unpack (expected 2)
-================================================================================================================================================================= 108 failed, 452 passed in 11.39s ==================================================================================================================================================================
+================================================================================================================================================================== 83 failed, 477 passed in 11.12s =============================================================================================================================================
