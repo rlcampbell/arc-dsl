@@ -13,8 +13,10 @@ def runSolver(key):
     train_outputs = [example["output"] for example in task["train"]]
     solverFunction = globals()["solve_" + key]
     for i in range(len(train_inputs)):
+        trainIn = train_inputs[i]
+        trainIn = tuple(tuple(row) for row in trainIn)
         trainOut = train_outputs[i]
-        solverOut = solverFunction(train_inputs[i])
+        solverOut = solverFunction(trainIn)
         solverOut = [list(inner_tuple) for inner_tuple in solverOut]
         assert solverOut == trainOut
 
