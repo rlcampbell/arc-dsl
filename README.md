@@ -6,18 +6,14 @@ The DSL looks like a great start to building a generic solver, but I realized th
 
 - arc-agi_training_challenges.json (from ARC Prize 2024)
 - - details at [https://www.kaggle.com/competitions/arc-prize-2024/data]
-- dsl.py (now includes arc_types and constants for simplicity) with some updates to fix problems
+- dsl.py (now includes arc_types and constants for simplicity) 
 - solvers.py (same as original)
 - test_dsl.py (160 tests, one for each DSL function, from Michael's code)
 - test_solvers.py (400 tests to run each solver, one for each training challenge task, all of the examples)
 
 Here are the latest results from running pytest on these 560 tests. 
 - DSL tests work except for one, the test_mpapply that fails assertion
-- solver tests fail 82 out of 400
-- - 45 with ValueError: too many values to unpack (expected 2)
-- - 9 with TypeError(s)
-- - 3 with RuntimeError: generator raised StopIteration
-- - 25 others that failed asserts 
+- solver tests fail 5 out of 400 on assert(s) for input and output not matching
 - see test_output.txt for more info
 
 
