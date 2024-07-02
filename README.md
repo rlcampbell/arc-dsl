@@ -2,16 +2,16 @@
 
 Fork/update by Roger Campbell. I much appreciate all of the work that went into creating this project and then sharing it with the rest of us. Thanks to Michael for that!
 
-The DSL looks like a great start to building a generic solver, but I realized that before I could do that I needed to resolve some issues since I could not get all of the solvers and tests to work. I am hopeful that others (with perhaps more Python experience) might be able to help me fix these issues. It appears that there are some differences in the runtime of python v 3.9 that Michael was using and the more current versions ... I am currently on 3.12.4. So, my immediate goal is to get the code updated to run most of the tests without problems. Most files are the same as in Michael's original project and the tests I have expanded upon.
+The DSL looks like a great start to building a generic solver, but I realized that before I could do that I needed to resolve some issues since I could not get all of the solvers and tests to work. I am hopeful that others (with perhaps more Python experience) might be able to help me fix these issues. It appears that there are some differences in the runtime of python v 3.9 that Michael was using and the more current versions ... I am currently on 3.12.4. My immediate goal is to get the code updated to run most of the tests without problems. Most files are the same as in Michael's original project and the tests I have expanded upon.
 
 - arc-agi_training_challenges.json (from ARC Prize 2024)
 - - details at [https://www.kaggle.com/competitions/arc-prize-2024/data]
-- dsl.py (now includes arc_types and constants for simplicity)
+- dsl.py (now includes arc_types and constants for simplicity) with some updates to fix problems
 - solvers.py (same as original)
 - test_dsl.py (160 tests, one for each DSL function, from Michael's code)
 - test_solvers.py (400 tests to run each solver, one for each training challenge task, all of the examples)
 
-Here are the initial results from running pytest on these 560 tests. 
+Here are the latest results from running pytest on these 560 tests. 
 - DSL tests work except for one, the test_mpapply that fails assertion
 - solver tests fail 82 out of 400
 - - 45 with ValueError: too many values to unpack (expected 2)
@@ -19,8 +19,6 @@ Here are the initial results from running pytest on these 560 tests.
 - - 3 with RuntimeError: generator raised StopIteration
 - - 25 others that failed asserts 
 - see test_output.txt for more info
-
-Nearly all of these are type/value errors. Michael was making good use of unions of different types for inputs/outputs of the DSL. So, my suspicion is that the change from Python 3.9 (that Michael used) to more current versions has some underlying changes in how these types work.
 
 
 
